@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+unless Post.exists?
+  10.times { |i| Post.create!(title: "タイトル#{i}", body: "本文#{i}") }
+end
